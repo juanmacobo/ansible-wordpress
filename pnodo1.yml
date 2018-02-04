@@ -1,0 +1,4 @@
+- hosts: nodo1
+  roles:
+    - mariadb
+    - bind9
