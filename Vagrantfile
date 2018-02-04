@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
     nodo1.vm.network :private_network, ip: "10.10.1.1/24"
     nodo1.vm.provision "ansible" do |ansible|
 	ansible.inventory_path = "hosts"
-	ansible.playbook = "playbooks/node1.yaml"
+	ansible.playbook = "pnodo1.yml"
     end
   end
  config.vm.define :nodo2 do |nodo2|
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     nodo2.vm.network :private_network, ip: "10.10.1.2/24"
     nodo2.vm.provision "ansible" do |ansible|
 	ansible.inventory_path = "hosts"
-	ansible.playbook = "playbooks/node2.yaml"
+	ansible.playbook = "pnodo2.yml"
     end
   end
 end

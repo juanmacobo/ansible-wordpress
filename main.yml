@@ -1,5 +1,0 @@
-- include: playbooks/mariadb/main.yaml
-- include: playbooks/bind9/main.yaml
-- include: playbooks/nginx/main.yaml
-- include: playbooks/php/main.yaml
-- include: playbooks/wordpress/main.yaml
