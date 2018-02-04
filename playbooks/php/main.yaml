@@ -5,10 +5,10 @@
     - name: instalar php
       apt: name={{ item }} update_cache=yes
       with_items:
-	- php7.0
+        - php7.0
         - php7.0-fpm
-	- php-mysql
-	- unzip
+        - php-mysql
+        - unzip
 
   handlers:
   - name: reinicio php

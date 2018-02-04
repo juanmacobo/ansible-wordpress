@@ -8,7 +8,7 @@
 
     - name: Añadiendo fichero cofiguración bind9
       copy:      
-	src: templates/named.conf.local
+        src: templates/named.conf.local
         dest: /etc/bind/named.conf.local
 
     - name: Configurando zona directa

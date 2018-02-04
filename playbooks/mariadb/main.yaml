@@ -10,26 +10,26 @@
 
     - name: copiar bbdd wordpress
       copy: 
-	src: templates/bbddwordpress.sql 
-	dest: /tmp
+        src: templates/bbddwordpress.sql 
+        dest: /tmp
       
     - name: restaurar bbdd wordpress
       mysql_db: 
-	name: wordpress	
-	state: import 
-	target: /tmp/bbddwordpress.sql
+        name: wordpress	
+        state: import 
+        target: /tmp/bbddwordpress.sql
 
     - name: crear usuario
       mysql_user: 
-	name: wordpress 
-	password: wordpress 
-	priv: wordpress.*:ALL 
-	host: %
+        name: wordpress 
+        password: wordpress 
+        priv: wordpress.*:ALL 
+        host: %
 
     - name: configuracion mariadb
       copy: 
-	src: templates/50-server.cnf 
-	dest: /etc/mysql/mariadb.conf.d/50-server.cnf
+        src: templates/50-server.cnf 
+        dest: /etc/mysql/mariadb.conf.d/50-server.cnf
 
   handlers:
   - name: reinicio mysql

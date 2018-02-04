@@ -4,15 +4,15 @@
   tasks:
     - name: descomprimir wordpress en nodo2
       unarchive: 
-	src: templates/wordpress-4.9.2-es_ES.zip 
-	dest: /var/www/html  
+        src: templates/wordpress-4.9.2-es_ES.zip 
+        dest: /var/www/html  
         owner: www-data
         group: www-data
 
     - name: copiar wp-config
       template: 
-	src: templates/wp-config.php 
-	dest: /var/www/html/wordpress/
+        src: templates/wp-config.php 
+        dest: /var/www/html/wordpress/
         owner: www-data
         group: www-data
 

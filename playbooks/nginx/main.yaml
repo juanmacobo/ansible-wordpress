@@ -7,8 +7,8 @@
 
     - name: copiar configuracion nginx
       copy: 
-	src: templates/default 
-	dest: /etc/nginx/sites-available/
+        src: templates/default 
+        dest: /etc/nginx/sites-available/
 
 
   handlers:
