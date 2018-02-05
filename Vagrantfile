@@ -7,10 +7,9 @@ Vagrant.configure("2") do |config|
     nodo1.vm.hostname = "nodo1"
     nodo1.vm.network :private_network, ip: "10.0.1.1/24",
         virtualbox__intnet: "redinterna"
-    nodo1.vm.network :private_network, ip: "10.10.1.1/24"
+    nodo1.vm.network :private_network, ip: "172.16.100.101/24"
     nodo1.vm.provision "ansible" do |ansible|
-	ansible.inventory_path = "hosts"
-	ansible.playbook = "pnodo1.yml"
+	ansible.playbook = "roles/playbooks/pnodo1.yml"
     end
   end
  config.vm.define :nodo2 do |nodo2|
@@ -18,10 +17,9 @@ Vagrant.configure("2") do |config|
     nodo2.vm.hostname = "nodo2"
     nodo2.vm.network :private_network, ip: "10.0.1.2/24",
 	virtualbox__intnet: "redinterna"
-    nodo2.vm.network :private_network, ip: "10.10.1.2/24"
+    nodo2.vm.network :private_network, ip: "172.16.100.102/24"
     nodo2.vm.provision "ansible" do |ansible|
-	ansible.inventory_path = "hosts"
-	ansible.playbook = "pnodo2.yml"
+	ansible.playbook = "roles/playbooks/pnodo2.yml"
     end
   end
 end

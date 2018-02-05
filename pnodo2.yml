@@ -1,6 +1,0 @@
-- hosts: nodo2
-
-  roles:
-    - nginx
-    - php
-    - wordpress

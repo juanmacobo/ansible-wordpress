@@ -1,3 +1,0 @@
-[hosts]
-nodo1 ansible_ssh_host=10.10.1.1 ansible_ssh_user=vagrant
-nodo2 ansible_ssh_host=10.10.1.2 ansible_ssh_user=vagrant
