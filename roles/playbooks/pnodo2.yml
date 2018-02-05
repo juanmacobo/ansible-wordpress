@@ -1,0 +1,3 @@
+- include: nginx/main.yaml
+- include: php/main.yaml
+- include: wordpress/main.yaml

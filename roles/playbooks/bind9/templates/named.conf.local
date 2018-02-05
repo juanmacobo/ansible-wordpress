@@ -1,0 +1,11 @@
+zone "example.com" 
+{
+	type master;
+	file "/var/cache/bind/db.example.com";
+};
+
+zone "100.16.172.in-addr.arpa" 
+{
+	type master;
+	file "/var/cache/bind/db.100.16.172";
+};

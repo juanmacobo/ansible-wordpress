@@ -1,0 +1,23 @@
+---
+- hosts: nodo2
+  become: yes
+  tasks:
+    - name: instalar php
+      apt: name={{ item }} update_cache=yes
+      with_items:
+        - php7.0
+        - php7.0-fpm
+        - php-mysql
+        - unzip
+
+    - name: reinicio nginx
+      service: name=nginx state=restarted
+      become: yes
+
+    - name: reinicio php-fpm
+      service: name=php7.0-fpm state=restarted
+      become: yes
+
+  handlers:
+  - name: reinicio php
+    service: name=php7.0-fpm state=restarted
